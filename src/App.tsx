@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Sidebar from './components/Sidebar';
+import Content from './views/Content';
+import GlobalStyle from './styles/global';
+import store from './store';
 
-function App() {
+const App: React.FC = () => {
+  const [sidebarIsOpen, setSidebarOpen] = useState(true);
+  const toggleSidebar = () => setSidebarOpen(!sidebarIsOpen);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Provider store={store}>
+        <BrowserRouter>
+          <div className="App wrapper">
+            <Sidebar toggle={toggleSidebar} isOpen={sidebarIsOpen} />
+            <Content
+              toggleSidebar={toggleSidebar}
+              sidebarIsOpen={sidebarIsOpen}
+            />
+          </div>
+        </BrowserRouter>
+        <GlobalStyle />
+      </Provider>
+    </>
   );
-}
-
+};
 export default App;
