@@ -1,19 +1,20 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Home from '../views/Home';
-import CourseDetail from '../views/Courses/Course';
-import Courses from '../views/Courses';
-import Feedbacks from '../views/Feedbacks';
-import GivenFeedbacks from '../views/Feedbacks/Given';
+import { useAuth } from '../contexts/auth';
+import CommonRoutes from './common.routes';
+import Layout from '../Layout';
 
-const Routes: React.FC = () => (
-  <Switch>
-    <Route exact path="/" />
-    <Route exact path="/courses" component={Courses} />
-    <Route path="/courses/:id" component={CourseDetail} />
-    <Route exact path="/feedbacks" component={Feedbacks} />
-    <Route path="/feedbacks/given" component={GivenFeedbacks} />
-  </Switch>
-);
-
+const Routes: React.FC = () => {
+  const { signed, loading } = useAuth();
+  // Loading
+  if (loading) {
+    return (
+      <div>
+        <span>Loading...</span>
+      </div>
+    );
+  }
+  console.log(signed, loading);
+  return signed ? <Layout /> : <CommonRoutes />;
+};
 export default Routes;

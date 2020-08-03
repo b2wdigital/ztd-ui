@@ -12,9 +12,6 @@ type SidebarProps = {
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => (
   <div className={classNames('sidebar', { 'is-open': isOpen })}>
     <div className="sidebar-header">
-      {/* <span color="info" onClick={toggle} style={{ color: '#fff' }}>
-        &times;
-      </span> */}
       <Info>
         <img src="https://api.adorable.io/avatars/285/abott@adorable.png" />
         <h3>Camila Camilo</h3>
