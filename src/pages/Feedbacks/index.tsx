@@ -4,22 +4,24 @@ import FeedbackModal from '../../components/FeedbackModal';
 import { CourseCard, Title, Section, Header } from './styles';
 import { Course } from '../../types/course';
 import api from '../../services/api';
+import { useAuth } from '../../contexts/auth';
 
 const Feedback: React.FC = () => {
   const [pendingFeedbackList, setFeedbackList] = useState<Course[]>([]);
+  const { user } = useAuth();
+
   useEffect(() => {
     const listCourses = async () => {
       try {
-        const { data } = await api.get(
-          '/users/PendingFeedbacks/5ed30a2aa171ea2e0b25dc6a',
-        );
+        const { data } = await api.get(`/users/PendingFeedbacks/${user?._id}`);
         setFeedbackList(data);
+        console.log(data);
       } catch (e) {
         console.error(e);
       }
     };
     listCourses();
-  }, [pendingFeedbackList]);
+  }, []);
 
   return (
     <>

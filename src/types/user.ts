@@ -1,6 +1,7 @@
 export type User = {
+  _id?: string;
   name: string;
-  profile_url: string;
+  profileUrl: string;
   title: string;
   email: string;
   canFeedback: boolean;

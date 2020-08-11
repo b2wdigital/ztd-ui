@@ -16,10 +16,9 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   display: flex;
-
   .infos {
     flex: 1;
-    padding: 20px;
+    padding: 5px;
     .btn-info {
       margin-top: 16px;
     }
@@ -33,7 +32,6 @@ export const Section = styled.section`
     }
     .card {
       margin-bottom: 16px;
-      top: -100px;
     }
   }
 `;
@@ -48,7 +46,6 @@ export const Header = styled.div`
   h1 {
     color: #fff;
     font-weight: 600;
-
     margin-left: 50px;
     margin-bottom: 50px;
   }
@@ -68,7 +65,6 @@ export const CourseCard = styled.div`
   background: linear-gradient(90deg, #84fab0 0%, #8feafe 100%);
   box-shadow: 0px 2px 4px rgba(8, 35, 48, 0.24);
   border-radius: 6px;
-
   .textbox {
     display: flex;
     align-items: center;
@@ -79,7 +75,6 @@ export const CourseCard = styled.div`
     background: #4aeac4;
     border-radius: 6px;
   }
-
   a {
     text-decoration: none;
   }

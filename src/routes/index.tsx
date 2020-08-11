@@ -14,7 +14,6 @@ const Routes: React.FC = () => {
       </div>
     );
   }
-  console.log(signed, loading);
   return signed ? <Layout /> : <CommonRoutes />;
 };
 export default Routes;

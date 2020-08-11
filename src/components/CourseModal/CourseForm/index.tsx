@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import { ButtonStyle } from './styles';
 import api from '../../../services/api';
 
@@ -14,7 +14,7 @@ type Inputs = {
 };
 
 const CourseForm: React.FC = () => {
-  const { register, handleSubmit, errors } = useForm<Inputs>();
+  const { register, handleSubmit, control, errors } = useForm<Inputs>();
   const onSubmit = handleSubmit(
     ({
       courseName,

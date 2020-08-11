@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom/';
 import { useAuth } from '../../contexts/auth';
 import { Image, Text } from './styles';
+import api from '../../services/api';
 
 const HeroImage: React.FC = () => {
+  function handleSignIn(): void {
+    window.open('http://localhost:3333/auth/google', '_self');
+  }
   const { signed, user, signIn } = useAuth();
 
   console.log(signed);
   console.log(user);
 
-  function handleSignIn() {
+  useEffect(() => {
     signIn();
-  }
+  }, []);
 
   return (
     <>

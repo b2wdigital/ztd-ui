@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'reactstrap';
-import FeedbackModal from '../../../components/FeedbackModal';
+import FeedbackModal from '../../components/FeedbackModal';
 import { CourseCard, Title, Section, Header } from './styles';
-import { Course } from '../../../types/course';
-import api from '../../../services/api';
+import { Course } from '../../types/course';
+import api from '../../services/api';
+import { useAuth } from '../../contexts/auth';
 
 const Feedback: React.FC = () => {
+  const { user } = useAuth();
   const [givingFeedbackList, setFeedbackList] = useState<Course[]>([]);
 
   useEffect(() => {
     const listCourses = async () => {
       try {
-        const { data } = await api.get(
-          '/users/GivenFeedbacks/5ed30a2aa171ea2e0b25dc6a',
-        );
+        const { data } = await api.get(`/users/GivenFeedbacks/${user?._id}`);
         setFeedbackList(data);
       } catch (e) {
         console.error(e);
