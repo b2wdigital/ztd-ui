@@ -1,12 +1,11 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { CardBody, Card } from 'reactstrap';
-import Accordion from '../../../components/Accordion';
+import Accordion from '../../components/Accordion';
 import { CourseCard, Section, Header } from './styles';
-import { Course } from '../../../types/course';
-import { User } from '../../../types/user';
-import api from '../../../services/api';
+import { Course } from '../../types/course';
+import { User } from '../../types/user';
+import api from '../../services/api';
 
 type CourseDetailProps = {
   course: Course;

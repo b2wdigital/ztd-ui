@@ -62,12 +62,14 @@ a:focus {
 
 .sidebar-header {
   background: #000B76;
-  padding-top: 50px;
+  padding-top: 24px;
 }
 
 .sidebar-header h3 {
   color: #fff;
+  font-size: 20px;
   padding: 1em;
+  text-align: center;
 }
 
 .sidebar ul p {

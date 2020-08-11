@@ -1,28 +1,21 @@
 import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import Sidebar from './components/Sidebar';
-import Content from './views/Content';
+import { AuthProvider } from './contexts/auth';
+import Layout from './Layout';
 import GlobalStyle from './styles/global';
 import store from './store';
+import Routes from './routes';
 
 const App: React.FC = () => {
-  const [sidebarIsOpen, setSidebarOpen] = useState(true);
-  const toggleSidebar = () => setSidebarOpen(!sidebarIsOpen);
   return (
     <>
-      <Provider store={store}>
-        <BrowserRouter>
-          <div className="App wrapper">
-            <Sidebar toggle={toggleSidebar} isOpen={sidebarIsOpen} />
-            <Content
-              toggleSidebar={toggleSidebar}
-              sidebarIsOpen={sidebarIsOpen}
-            />
-          </div>
-        </BrowserRouter>
-        <GlobalStyle />
-      </Provider>
+      <BrowserRouter>
+        <AuthProvider>
+          <Routes />
+        </AuthProvider>
+      </BrowserRouter>
+      <GlobalStyle />
     </>
   );
 };

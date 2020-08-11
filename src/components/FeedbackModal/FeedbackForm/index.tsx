@@ -3,6 +3,7 @@ import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import { useForm } from 'react-hook-form';
 import { ButtonStyle } from './styles';
 import api from '../../../services/api';
+import { useAuth } from '../../../contexts/auth';
 
 type Inputs = {
   gradeFeedback: number;
@@ -15,13 +16,15 @@ type FormFeedback = {
 };
 
 const FeedbackForm: React.FC<FormFeedback> = ({ idCourse }) => {
+  const { user } = useAuth();
+
   const { register, handleSubmit, errors } = useForm<Inputs>();
 
   const onSubmit = handleSubmit(({ gradeFeedback, positive, negative }) => {
     const createFeedback = async () => {
       try {
         const { data } = await api.post('/feedbacks', {
-          id_user: '5ed30a2aa171ea2e0b25dc6a',
+          id_user: user?._id,
           id_course: idCourse,
           grade: gradeFeedback,
           positiveFeedback: positive,
