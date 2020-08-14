@@ -7,7 +7,7 @@ interface User {
   _id?: string;
   name: string;
   profileUrl: string;
-  title: string;
+  isAdmin: boolean;
   email: string;
   canFeedback: boolean;
   canEditCourse: boolean;

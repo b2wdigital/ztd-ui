@@ -1,33 +1,32 @@
 import styled from 'styled-components';
 
-export const Image = styled.section`
-  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  height: 100%;
-  margin: 0;
-  background: linear-gradient(90deg, #c7ccff 0%, #d7fff5 100%);
-`;
-
 export const Text = styled.div`
   /* Place text in the middle of the image */
-  text-align: center;
-  width: 100%;
+  text-align: left;
   position: absolute;
-  margin-top: 25%;
+  margin-top: 20%;
   color: black;
-
+  grid-area: login;
+  display: inline-grid;
+  h1 {
+    font-size: 80px;
+    font-weight: 600;
+    color: #fa573c;
+  }
+  p {
+    text-align: center;
+    font-size: 20px;
+  }
   button {
     border: none;
+    border-radius: 15px;
     outline: 0;
-    display: inline-block;
     padding: 10px 25px;
-    color: black;
-    background-color: #ddd;
+    background-color: #0e3476;
+    color: white;
     text-align: center;
     cursor: pointer;
-
-    &:hover {
-      background-color: grey;
-      color: white;
-    }
   }
 `;
+
+export const Box = styled.div``;
