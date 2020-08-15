@@ -8,7 +8,7 @@ type Response = {
 };
 
 export default async function login(): Promise<Response> {
-  const { data } = await api.get('auth/login/success', {
+  const { data } = await api.get('/auth/login/success', {
     params: {},
     headers: {
       Accept: 'application/json',
@@ -17,7 +17,6 @@ export default async function login(): Promise<Response> {
     },
     withCredentials: true,
   });
-  console.log(data);
   if (data.user) {
     const { user }: { user: User } = data;
     const response = {

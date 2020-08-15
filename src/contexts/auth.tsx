@@ -48,7 +48,7 @@ export const AuthProvider: React.FC = ({ children }) => {
   // Sign In Funct.
   async function signIn() {
     const response = await login();
-    console.log(response);
+
     if (response.user) {
       setUser(response.user);
       api.defaults.headers.Authorization = `Bearer ${response.token}`;

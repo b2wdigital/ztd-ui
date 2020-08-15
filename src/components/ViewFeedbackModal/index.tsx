@@ -36,7 +36,6 @@ const ViewFeedbackModal: React.FC<ModalProps> = ({
           `/feedbacks/by_course/${course_id}/${user?._id}`,
         );
         setFeedback(data);
-        console.log(data);
       } catch (e) {
         console.error(e);
       }
