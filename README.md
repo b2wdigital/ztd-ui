@@ -1,45 +1,110 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+    <img alt="Zero to Dev" title="#ZeroToDev" src="src/images/logo_git.png" />
+</h1>
 
-## Available Scripts
+<h1 align="center">
+  Zero To Dev
+</h1>
+<p align="center">Aplicação criada para auxiliar o Estágio Tech da B2W</p>
 
-In the project directory, you can run:
+<p align="center">
+ <a href="#-sobre-o-projeto">Sobre</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> •
+ <a href="#-layout">Layout</a> •
+ <a href="#-como-executar-o-projeto">Como executar</a> •
+ <a href="#-tecnologias">Tecnologias</a> •
+ <a href="#-contribuidores">Contribuidores</a> •
+ <a href="#-autor">Autor</a> •
+ <a href="#user-content--licença">Licença</a>
+</p>
 
-### `yarn start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Sobre o projeto
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+O projeto foi desenvolvido para aplicar os conceitos aprendidos durante o Estágio Tech 2020 da B2W.
 
-### `yarn test`
+O Estágio se propõe a formar Dev Jrs em 6 meses. Para conhecer mais [clique aqui](https://estagiotech.b2w.io/)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `yarn build`
+## Funcionalidades
+  - Autenticação via Google.
+ - Dashboard com:
+    - Visualização ao número de feedbacks dados e pendentes
+    - Visualização de feedbacks por curso
+    - Visualização de feedbacks por usuário.
+ - Aulas com:
+    - Criação.
+    - Página de visualização individual para mais informações.
+ - Feedbacks com:
+    - Formulário Padronizado e sendo criado a cada aula criada.
+    - Listagem de Feedbacks Pendentes
+    - Listagem de Feedbacks dados, não sendo possível editar, apenas visualizar.
+---
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🎨 Layout
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+Screenshots em Breve .
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## Como executar o projeto
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Este projeto é divido em duas partes:
+1. [Backend](https://github.com/b2wdigital/ztd-api)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. [Frontend](https://github.com/b2wdigital/ztd-ui)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Pré-requisitos
 
-## Learn More
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### 🧭 Rodando a aplicação web (Frontend)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-# ztd-ui
+```bash
+# Clone este repositório
+$ git clone git@github.com:tgmarinho/README-ecoleta.git
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd README-ecoleta
+# Vá para a pasta da aplicação Front End
+$ cd web
+# Instale as dependências
+$ npm install
+# Execute a aplicação em modo de desenvolvimento
+$ npm run start
+# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+```
+
+---
+
+## Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+#### **Website**  ([React](https://reactjs.org/)  +  [TypeScript](https://www.typescriptlang.org/))
+
+-   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
+-   **[Axios](https://github.com/axios/axios)**
+
+
+
+
+
+#### []("")**Utilitários**
+
+-  Protótipo:  **[Figma](https://www.figma.com/)**
+-   API:  **[ZTD -API](https://github.com/b2wdigital/ztd-api)**
+-   Auth:  **[Passport](https://github.com/jaredhanson/passport)**
+-   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**
+-   Teste de API:  **[Insomnia](https://insomnia.rest/)**
+-   Estilização: **[React-Strap](https://github.com/reactstrap)** + **[Styled-Components](https://github.com/styled-components/styled-components)**
+
+
+---
+
+Feito por Camila 🦄 [Agradecimentos pelo Layout do Readme](https://blog.rocketseat.com.br/como-fazer-um-bom-readme/)
