@@ -26,13 +26,14 @@ export const Header = styled.div`
   justify-content: space-between;
 `;
 
-export const CourseCard = styled.div`
+export const FeedbackCard = styled.div`
   max-width: 700px;
   .textbox {
     display: flex;
     align-items: center;
     align-self: flex-end;
     justify-content: space-between;
+    margin-top: 10px;
     height: 60px;
     padding: 20px;
     background: #ffffff;
@@ -44,7 +45,7 @@ export const CourseCard = styled.div`
     font-family: Quicksand;
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 45px;
     color: #363636;
   }
