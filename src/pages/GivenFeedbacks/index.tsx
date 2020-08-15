@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'reactstrap';
-import FeedbackModal from '../../components/FeedbackModal';
+import ViewFeedbackModal from '../../components/ViewFeedbackModal';
 import { CourseCard, Title, Section, Header } from './styles';
 import { Course } from '../../types/course';
 import api from '../../services/api';
@@ -13,14 +13,15 @@ const Feedback: React.FC = () => {
   useEffect(() => {
     const listCourses = async () => {
       try {
-        const { data } = await api.get(`/users/GivenFeedbacks/${user?._id}`);
+        const { data } = await api.get(`/users/givenfeedbacks/${user?._id}`);
         setFeedbackList(data);
+        console.log(data);
       } catch (e) {
         console.error(e);
       }
     };
     listCourses();
-  }, [givingFeedbackList]);
+  }, []);
 
   return (
     <>
@@ -38,7 +39,7 @@ const Feedback: React.FC = () => {
           <CourseCard>
             <div className="textbox">
               <span>{feedback.name}</span>
-              <FeedbackModal
+              <ViewFeedbackModal
                 buttonLabel="Feedback Dado"
                 className="disabled"
                 course_id={feedback._id}

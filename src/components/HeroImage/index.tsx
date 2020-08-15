@@ -1,17 +1,15 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom/';
 import { useAuth } from '../../contexts/auth';
-import { Image, Text } from './styles';
+import { Text, Box } from './styles';
 import api from '../../services/api';
+import homeImage from '../../images/3911318.jpg';
 
 const HeroImage: React.FC = () => {
   function handleSignIn(): void {
-    window.open('http://localhost:3333/auth/google', '_self');
+    window.open('https://ztd.api.pe.hmg.asgard.b2w.io/auth/google', '_self');
   }
   const { signed, user, signIn } = useAuth();
-
-  console.log(signed);
-  console.log(user);
 
   useEffect(() => {
     signIn();
@@ -19,15 +17,15 @@ const HeroImage: React.FC = () => {
 
   return (
     <>
-      <Image>
+      <Box>
         <Text>
           <h1> Zero to Dev </h1>
-          <p>Bem vindo a sua jornada de programação </p>
+          <p>Sua jornada de programação começa aqui</p>
           <button type="button" onClick={handleSignIn}>
-            Sign In
+            Entrar
           </button>
         </Text>
-      </Image>
+      </Box>
     </>
   );
 };

@@ -19,6 +19,7 @@ export const Section = styled.section`
   .infos {
     flex: 1;
     padding: 5px;
+    width: 30%;
     .btn-info {
       margin-top: 16px;
     }

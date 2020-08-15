@@ -7,7 +7,7 @@ interface User {
   _id?: string;
   name: string;
   profileUrl: string;
-  title: string;
+  isAdmin: boolean;
   email: string;
   canFeedback: boolean;
   canEditCourse: boolean;
@@ -42,7 +42,7 @@ export const AuthProvider: React.FC = ({ children }) => {
     }
 
     // Simulate to take 500 ms. the check process
-    setTimeout(() => setLoading(false), 500);
+    setTimeout(() => setLoading(false));
   }, []);
 
   // Sign In Funct.

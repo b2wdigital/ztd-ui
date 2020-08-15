@@ -10,7 +10,12 @@ type SidebarProps = {
   toggle: () => void;
 };
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
-  const { user } = useAuth();
+  const { user, signed, logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+    window.open('https://ztd.api.pe.hmg.asgard.b2w.io/auth/logout', '_self');
+  };
 
   return (
     <div className={classNames('sidebar', { 'is-open': isOpen })}>
@@ -45,6 +50,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
           <NavItem>
             <NavLink tag={Link} to="/feedbacks">
               Feedback
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink tag={Link} to="/feedbacks/given">
+              Feedbacks Dados
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink onClick={handleLogout} tag={Link} to="/">
+              Logout
             </NavLink>
           </NavItem>
         </Nav>
