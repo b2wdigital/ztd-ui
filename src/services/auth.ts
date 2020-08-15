@@ -8,7 +8,7 @@ type Response = {
 };
 
 export default async function login(): Promise<Response> {
-  const { data } = await api.get('auth/login/success', {
+  const { data } = await api.get('/auth/login/success', {
     params: {},
     headers: {
       Accept: 'application/json',
