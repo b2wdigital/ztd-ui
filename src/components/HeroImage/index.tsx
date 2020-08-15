@@ -7,7 +7,7 @@ import homeImage from '../../images/3911318.jpg';
 
 const HeroImage: React.FC = () => {
   function handleSignIn(): void {
-    window.open('http://localhost:3333/auth/google', '_self');
+    window.open('https://ztd.api.pe.hmg.asgard.b2w.io/auth/google', '_self');
   }
   const { signed, user, signIn } = useAuth();
 

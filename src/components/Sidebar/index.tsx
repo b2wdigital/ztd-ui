@@ -14,7 +14,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggle }) => {
 
   const handleLogout = () => {
     logout();
-    window.open('http://localhost:3333/auth/logout', '_self');
+    window.open('https://ztd.api.pe.hmg.asgard.b2w.io/auth/logout', '_self');
   };
 
   return (
