@@ -13,9 +13,7 @@
  <a href="#-layout">Layout</a> •
  <a href="#-como-executar-o-projeto">Como executar</a> •
  <a href="#-tecnologias">Tecnologias</a> •
- <a href="#-contribuidores">Contribuidores</a> •
- <a href="#-autor">Autor</a> •
- <a href="#user-content--licença">Licença</a>
+ <a href="#-autor">Autor</a>
 </p>
 
 
@@ -42,7 +40,7 @@ O Estágio se propõe a formar Dev Jrs em 6 meses. Para conhecer mais [clique aq
     - Listagem de Feedbacks dados, não sendo possível editar, apenas visualizar.
 ---
 
-## 🎨 Layout
+## Layout
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
 Screenshots em Breve .
@@ -68,15 +66,13 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
-$ git clone git@github.com:tgmarinho/README-ecoleta.git
+$ git clone git@github.com:b2wdigital/ztd-ui.git
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd README-ecoleta
-# Vá para a pasta da aplicação Front End
-$ cd web
-# Instale as dependências
-$ npm install
-# Execute a aplicação em modo de desenvolvimento
-$ npm run start
+$ cd ztd-ui
+# Instale as dependencias
+$ yarn
+# Inicie a aplicação
+$ yarn start
 # A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 ```
 
