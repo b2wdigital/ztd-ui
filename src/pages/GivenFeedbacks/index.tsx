@@ -15,7 +15,6 @@ const Feedback: React.FC = () => {
       try {
         const { data } = await api.get(`/users/givenfeedbacks/${user?._id}`);
         setFeedbackList(data);
-        console.log(data);
       } catch (e) {
         console.error(e);
       }

@@ -17,7 +17,6 @@ export default async function login(): Promise<Response> {
     },
     withCredentials: true,
   });
-  console.log(data);
   if (data.user) {
     const { user }: { user: User } = data;
     const response = {
