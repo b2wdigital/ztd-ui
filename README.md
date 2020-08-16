@@ -43,7 +43,7 @@ O Estágio se propõe a formar Dev Jrs em 6 meses. Para conhecer mais [clique aq
 ## Layout
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-Screenshots em Breve .
+<b>Screenshots em Breve.</b>
 </p>
 
 ---
@@ -86,9 +86,6 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 -   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
 -   **[Axios](https://github.com/axios/axios)**
-
-
-
 
 
 #### []("")**Utilitários**
